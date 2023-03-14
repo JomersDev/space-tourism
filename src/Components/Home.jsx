@@ -9,7 +9,7 @@ export default function Home() {
                 <h5 className='text-secondary font-barlow-condensed uppercase text-center tracking-[0.169rem] mb-2 md:text-xl'>
                     So, You want to Travel to
                 </h5>
-                <h1 className='text-primary font-bellefair text-[5rem] text-center mb-4 md:text-[9.375rem]'>
+                <h1 className='text-primary font-bellefair text-[5rem] text-center mb-4 md:text-[9.375rem] md:mb-0'>
                     SPACE
                 </h1>
                 <p className="text-secondary font-barlow text-center text-[0.95rem] max-w-[327px] mx-auto leading-6 md:text-base md:max-w-[444px] md:leading-7">
