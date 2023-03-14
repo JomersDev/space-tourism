@@ -23,23 +23,24 @@ export default function Nav() {
 
 
     return (
-        <nav className="mt-6 mx-6 flex items-center justify-between">
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg>
+        <nav className="mx-6 pt-6 flex items-center justify-between md:pt-0 md:mx-0">
+            <div className="md:ml-10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fillRule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg>
             </div>
 
             {/* desktop nav menu */}
-            <ul className="hidden md:flex md:gap-x-4">
-                <li className="pr-4 cursor-pointer hover:underline hover:underline-offset-8">
-                   <a>HOME</a> 
+            <ul className="hidden md:flex md:gap-x-8 bg-nav text-primary py-10 px-12 font-barlow-condensed tracking-[0.14rem]">
+                <li className="group cursor-pointer">
+                   <a>HOME</a>
+                   <div className="h-1 w-10 mt-8 absolute hidden bg-primary group-hover:block focus:block"></div> 
                 </li>
-                <li className="pr-4 cursor-pointer hover:underline hover:underline-offset-8">
+                <li className="">
                    <a>DESTINATION</a>
                 </li>
-                <li className="pr-4 cursor-pointer hover:underline hover:underline-offset-8">
+                <li className="">
                    <a>CREW</a>
                 </li>
-                <li className="cursor-pointer hover:underline hover:underline-offset-8">
+                <li className="">
                    <a>Technology</a> 
                 </li>
             </ul>
@@ -48,15 +49,10 @@ export default function Nav() {
             {/* render open or close menu based on the state of nav  */}
             <div onClick={handleNav} className="block md:hidden">
                 {nav ? 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z"/><path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z"/></g></svg>  
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21"><g fill="#D0D6F9" fillRule="evenodd"><path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z"/><path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z"/></g></svg>  
                         :
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z"/></g></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21"><g fill="#D0D6F9" fillRule="evenodd"><path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z"/></g></svg>
                 }
-            </div>
-
-            <div className="hidden md:flex md:gap-x-4">
-            <p>2</p>
-            <p>2</p>
             </div>
 
             {/* Mobile nav menu */}
