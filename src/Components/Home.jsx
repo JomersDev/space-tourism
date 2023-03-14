@@ -18,8 +18,8 @@ export default function Home() {
                     because we'll give you a truly out of this world experience!
                 </p>
             </div>
-            <div className="flex justify-center mt-16">
-                <button className="bg-primary text-dark w-36 h-36 rounded-full font-bellefair tracking-[0.0781rem]">
+            <div className="flex justify-center mt-12">
+                <button className="bg-primary text-dark w-36 h-36 rounded-full font-bellefair tracking-[0.0781rem] absolute mt-6 hover:h-48 hover:w-48 hover:mt-1 hover:border-[20px] hover:border-gray transition-all duration-500">
                     EXPLORE
                 </button>
             </div>
