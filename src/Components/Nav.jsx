@@ -23,27 +23,28 @@ export default function Nav() {
 
 
     return (
-        <nav className="mx-6 flex items-center justify-between md:pt-0 md:mx-0">
-            <div className="md:ml-10 md:mt-2 flex justify-center">
+        <nav className="mx-6 flex items-center justify-between md:pt-0 md:mx-0 xl:mt-10">
+            <div className="md:ml-10 md:mt-2 flex justify-center xl:ml-14">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fillRule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg>
             </div>
 
             {/* desktop nav menu */}
-            <ul className="hidden md:flex text-primary font-barlow-condensed tracking-[0.14rem]">
-                <li className="bg-nav cursor-pointer py-10 pl-12 group">
-                   <a className="relative">HOME</a>
+            <ul className="hidden md:flex text-primary font-barlow-condensed tracking-[0.14rem] bg-nav xl:bg-nav/50 xl:backdrop-blur-xl">
+                <li className=" cursor-pointer py-10 pl-12 group xl:pl-32">
+                   <a><span className="hidden xl:inline-block mr-3">00</span>HOME</a>
                    <span className="absolute bg-[#8B8B90] h-1 w-10 top-24 right-[395px] hidden group-hover:block"></span>
                 </li>
-                <li className="bg-nav cursor-pointer py-10 pl-10 group">
-                   <a>DESTINATION</a>
+                <li className="cursor-pointer py-10 pl-10 group xl:pl-12">
+                   <a><span className="hidden xl:inline-block mr-3">00</span>DESTINATION</a>
                    <span className="absolute bg-[#8B8B90] h-1 w-[94px] top-24 right-[260px] hidden group-hover:block"></span>
                 </li>
-                <li className="bg-nav cursor-pointer py-10 pl-10 group">
-                   <a>CREW</a>
+                <li className="cursor-pointer py-10 pl-10 group xl:pl-12">
+                   <a><span className="hidden xl:inline-block mr-3">00</span>CREW</a>
                    <span className="absolute bg-[#8B8B90] h-1 w-10 top-24 right-[181px] hidden group-hover:block"></span>
                 </li>
-                <li className="bg-nav cursor-pointer py-10 pl-10 pr-12 group">
-                   <a>TECHNOLOGY</a> 
+                <li className="cursor-pointer py-10 pl-10 pr-12 group xl:pr-36 xl:pl-12">
+                   <a>
+                    <span className="hidden xl:inline-block mr-3">00</span>TECHNOLOGY</a> 
                    <span className="absolute bg-[#8B8B90] h-1 w-[94px] top-24 right-[47px] hidden group-hover:block"></span>
                 </li>
             </ul>

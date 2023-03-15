@@ -5,7 +5,7 @@ export default function Home() {
     return (
         <div className='bg-mobile-home h-screen bg-no-repeat bg-cover w-screen flex flex-col md:bg-tablet-home xl:bg-desktop-home'>
             <Nav />
-            <div className="xl:mt-48 xl:ml-40 xl:flex xl:gap-x-96">
+            <div className="xl:mt-40 xl:ml-40 xl:flex xl:gap-x-[25rem]">
                 <div className="mt-12 md:mt-28">
                     <h5 className='text-secondary font-barlow-condensed uppercase text-center tracking-[0.169rem] mb-2 md:text-xl xl:text-[28px] xl:text-left xl:tracking-[0.295rem]'>
                         So, You want to Travel to
@@ -20,7 +20,7 @@ export default function Home() {
                     </p>
                 </div>
                 <div className="flex justify-center mt-12">
-                    <button className="bg-primary text-dark w-36 h-36 rounded-full font-bellefair tracking-[0.0781rem] absolute mt-6 hover:h-48 hover:w-48 hover:mt-1 hover:border-[20px] hover:border-gray transition-all duration-500 md:w-60 md:h-60 md:text-3xl xl:mt-40">
+                    <button className="bg-primary text-dark w-36 h-36 rounded-full font-bellefair tracking-[0.0781rem] absolute mt-6 hover:h-48 hover:w-48 hover:mt-1 hover:border-[20px] hover:border-gray transition-all duration-500 md:w-60 md:h-60 md:text-3xl xl:mt-40 xl:w-64 xl:h-64 xl:text-[2rem]">
                         EXPLORE
                     </button>
                 </div>
