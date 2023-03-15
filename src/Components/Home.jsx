@@ -5,7 +5,7 @@ export default function Home() {
     return (
         <div className='bg-mobile-home h-screen bg-no-repeat bg-cover w-screen flex flex-col md:bg-tablet-home xl:bg-desktop-home'>
             <Nav />
-            <div className="xl:mt-40 xl:ml-40 xl:flex xl:gap-x-[25rem]">
+            <div className="xl:mt-40 xl:ml-40 xl:flex xl:gap-x-[32rem] 2xl:ml-64 2xl:mt-24">
                 <div className="mt-12 md:mt-28">
                     <h5 className='text-secondary font-barlow-condensed uppercase text-center tracking-[0.169rem] mb-2 md:text-xl xl:text-[28px] xl:text-left xl:tracking-[0.295rem]'>
                         So, You want to Travel to
