@@ -10,6 +10,9 @@ module.exports = {
         'mobile-home': "url(/home/background-home-mobile.jpg)",
         'tablet-home': "url(/home/background-home-tablet.jpg)",
         'desktop-home': "url(/home/background-home-desktop.jpg)",
+        'mobile-destination': "url(/destination/background-destination-mobile.jpg)",
+        'tablet-destination': "url(/destination/background-destination-tablet.jpg)",
+        'desktop-destination': "url(/destination/background-destination-desktop.jpg)",
       },
       colors: {
         'primary': '#FFFFFF',
