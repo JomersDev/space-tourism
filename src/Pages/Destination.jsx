@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Nav from "../Components/Nav";
+import {data} from '/data.js'
+
 
 export default function Destination() {
+
+    // 0 == moon, 1 == mars, 2 == europa, 3 == Titan
+    const [destination, setDestination] = useState(data.destinations[0])
+
+    function handleDestination(index) {
+        setDestination(data.destinations[index])
+    }
+
     return (
-        <div className='bg-mobile-destination md:bg-tablet-destination xl:bg-desktop-destination min-h-screen bg-no-repeat bg-cover w-screen flex flex-col pb-14'>
+        <div className='bg-mobile-destination md:bg-tablet-destination xl:bg-desktop-destination min-h-screen w-screen bg-no-repeat bg-cover flex flex-col pb-14'>
             <Nav />
             <div>
                 <div className="mt-6 flex flex-col items-center gap-y-8">
@@ -13,32 +23,39 @@ export default function Destination() {
                     </div>
                     <img 
                         className="w-1/2 mb-6"
-                        src="/destination/image-moon.png" 
+                        src={destination.images.png}
                         alt="picture of the moon" 
                     />
                 </div>
 
                 <div className="flex flex-col items-center border-b border-gray-500 mx-4 pb-8 mb-8">
                     <div className="flex gap-x-6 text-secondary font-barlow-condensed text-sm mb-6">
-                        <button className="tracking-[0.1475rem] border-transparent pb-2 border-b-2 cursor-pointer hover:border-gray-500">
+                        <button
+                            onClick={() => handleDestination(0)}
+                            className="tracking-[0.1475rem] border-transparent pb-2 border-b-2 cursor-pointer hover:border-gray-500">
                             MOON
                         </button>
-                        <button className="tracking-[0.1475rem] border-transparent pb-2 border-b-2 cursor-pointer hover:border-gray-500">
+                        <button
+                            onClick={() => handleDestination(1)} 
+                            className="tracking-[0.1475rem] border-transparent pb-2 border-b-2 cursor-pointer hover:border-gray-500">
                             MARS
                         </button>
-                        <button className="tracking-[0.1475rem] border-transparent pb-2 border-b-2 cursor-pointer hover:border-gray-500">
+                        <button
+                            onClick={() => handleDestination(2)} 
+                            className="tracking-[0.1475rem] border-transparent pb-2 border-b-2 cursor-pointer hover:border-gray-500">
                             EUROPA
                         </button>
-                        <button className="tracking-[0.1475rem] border-transparent pb-2 border-b-2 cursor-pointer hover:border-gray-500">
+                        <button
+                            onClick={() => handleDestination(3)} 
+                            className="tracking-[0.1475rem] border-transparent pb-2 border-b-2 cursor-pointer hover:border-gray-500">
                             TITAN
                         </button>
                     </div>
                     <h1 className="text-primary font-bellefair text-6xl mb-2">
-                        MOON
+                        {destination.name}
                     </h1>
                     <p className="text-secondary text-center max-w-[21rem] leading-[1.5625rem] font-barlow">
-                        See our planet as you've never seen it before. A perfect relaxing trip away to help regain perspective and come back
-                        refreshed. While you're there, take in some history by visiting the Luna 2 and Apollo landing sites.
+                        {destination.description}
                     </p>
                 </div>
 
@@ -48,7 +65,7 @@ export default function Destination() {
                             AVG. Distance
                         </h2>
                         <p className="text-primary font-bellefair text-3xl">
-                            384,400 KM
+                            {destination.distance}
                         </p>
                     </div>
                     <div>
@@ -56,7 +73,7 @@ export default function Destination() {
                             Est. Travel Time
                         </h2>
                         <p className="text-primary font-bellefair text-3xl text-center">
-                            3 DAYS
+                            {destination.travel}
                         </p>
                     </div>
                 </div>
