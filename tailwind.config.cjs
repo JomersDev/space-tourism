@@ -13,6 +13,9 @@ module.exports = {
         'mobile-destination': "url(/destination/background-destination-mobile.jpg)",
         'tablet-destination': "url(/destination/background-destination-tablet.jpg)",
         'desktop-destination': "url(/destination/background-destination-desktop.jpg)",
+        'mobile-crew': "url(/crew/background-crew-mobile.jpg)",
+        'tablet-crew': "url(/crew/background-crew-tablet.jpg)",
+        'desktop-crew': "url(/crew/background-crew-desktop.jpg)",
       },
       colors: {
         'primary': '#FFFFFF',
